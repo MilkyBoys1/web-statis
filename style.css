@@ -1,0 +1,252 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fefaf6;
+  color: #2c2c2c;
+  transition: background 0.4s, color 0.4s;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Colors */
+:root {
+  --brown: #6b4226;
+  --navy: #1c2a3a;
+  --cream: #fdf6f0;
+}
+
+/* Header */
+header {
+  background: var(--navy);
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffddac;
+}
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+.nav-links li a,
+.nav-links li button {
+  font-weight: 500;
+  padding: 0.5rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.toggle-btn {
+  font-size: 1.2rem;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://source.unsplash.com/1600x600/?coffee,cafe') center/cover;
+  color: white;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+.hero-content h2 {
+  font-size: 2.8rem;
+}
+.btn-primary {
+  background-color: var(--brown);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  display: inline-block;
+  margin-top: 1.5rem;
+  transition: background 0.3s;
+}
+.btn-primary:hover {
+  background-color: #4b2a15;
+}
+
+/* Section General */
+.section {
+  padding: 4rem 0;
+}
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--brown);
+  margin-bottom: 2rem;
+}
+
+/* Menu */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.menu-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s;
+}
+.menu-card:hover {
+  transform: translateY(-5px);
+}
+.menu-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.menu-card h3 {
+  margin: 0.8rem 0 0.4rem;
+}
+.menu-card button {
+  background: var(--brown);
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.menu-card button:hover {
+  background: #4b2a15;
+}
+
+/* Kontak */
+.kontak-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.btn-kontak {
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: 0.3s;
+  color: white;
+}
+.ig {
+  background: #e1306c;
+}
+.email {
+  background: #0072c6;
+}
+.lokasi {
+  background: #2ecc71;
+}
+.btn-kontak:hover {
+  opacity: 0.85;
+}
+
+/* Footer */
+footer {
+  background: var(--navy);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background: #1c1c1c;
+  color: #f0f0f0;
+}
+.dark-mode header,
+.dark-mode footer {
+  background: #111;
+}
+.dark-mode .menu-card {
+  background: #2c2c2c;
+}
+.dark-mode .btn-primary,
+.dark-mode .menu-card button {
+  background: #f1f1f1;
+  color: #111;
+}
+.cart-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.cart-btn span {
+  background: crimson;
+  color: #fff;
+  font-size: 0.8rem;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+}
+
+.keranjang {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  background: #fff;
+  border: 2px solid #ccc;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 300px;
+  display: none;
+  z-index: 1000;
+}
+
+.keranjang.tampil {
+  display: block;
+}
+
+.btn-checkout {
+  background-color: navy;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+.hapus-btn {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 2px 6px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
+
+#totalHarga {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: right;
+  color: #333;
+}

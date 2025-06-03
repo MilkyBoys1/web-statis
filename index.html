@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saeclum Café</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <h1 class="logo">Saeclum Café</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#tentang">About</a></li>
+          <li><a href="#kontak">Contact</a></li>
+          <li><button id="cartButton" class="cart-btn">🛒 <span id="cartCount">0</span></button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <h2>Welcome To Saeclum Café</h2>
+      <p>Enjoy coffee with a luxurious atmosphere</p>
+      <a href="#menu" class="btn-primary">View Menu</a>
+    </div>
+  </section>
+
+  <section id="menu" class="section">
+    <div class="container">
+      <h2 class="section-title">Drink Menu</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img src="espresso.jpg" alt="Espresso">
+          <h3>Espresso</h3>
+          <p>Rp 18.000</p>
+          <button onclick="tambahKeKeranjang('Espresso', 18000)">Tambah</button>
+        </div>
+        <div class="menu-card">
+          <img src="latte.jpg" alt="Latte">
+          <h3>Latte</h3>
+          <p>Rp 22.000</p>
+          <button onclick="tambahKeKeranjang('Latte', 22000)">Tambah</button>
+        </div>
+        <div class="menu-card">
+          <img src="cappucino.jpg" alt="Cappuccino">
+          <h3>Cappuccino</h3>
+          <p>Rp 20.000</p>
+          <button onclick="tambahKeKeranjang('Cappuccino', 20000)">Tambah</button>
+        </div>
+      </div>
+
+      <h2 class="section-title">Food Menu</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img src="croissant.jpg" alt="Croissant">
+          <h3>Croissant</h3>
+          <p>Rp 15.000</p>
+          <button onclick="tambahKeKeranjang('Croissant', 15000)">Tambah</button>
+        </div>
+        <div class="menu-card">
+          <img src="sandwich.jpg" alt="Sandwich">
+          <h3>Sandwich</h3>
+          <p>Rp 25.000</p>
+          <button onclick="tambahKeKeranjang('Sandwich', 25000)">Tambah</button>
+        </div>
+        <div class="menu-card">
+          <img src="pasta carbonara.jpg" alt="Pasta">
+          <h3>Pasta Carbonara</h3>
+          <p>Rp 35.000</p>
+          <button onclick="tambahKeKeranjang('Pasta Carbonara', 35000)">Tambah</button>
+        </div>
+      </div>
+
+      <h2 class="section-title">Snack Menu</h2>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img src="french fries.jpg" alt="Kentang Goreng">
+          <h3>French Fries</h3>
+          <p>Rp 18.000</p>
+          <button onclick="tambahKeKeranjang('Kentang Goreng', 18000)">Tambah</button>
+        </div>
+        <div class="menu-card">
+          <img src="nachos.jpg" alt="Nachos">
+          <h3>Nachos</h3>
+          <p>Rp 22.000</p>
+          <button onclick="tambahKeKeranjang('Nachos', 22000)">Tambah</button>
+        </div>
+        <div class="menu-card">
+          <img src="onion ring.jpg" alt="Onion Rings">
+          <h3>Onion Rings</h3>
+          <p>Rp 20.000</p>
+          <button onclick="tambahKeKeranjang('Onion Rings', 20000)">Tambah</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tentang" class="section">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <p>Kopi Kita adalah kafe dengan konsep lokal-modern. Menyajikan kopi dari petani terbaik di Indonesia dalam suasana cozy dan estetik.</p>
+    </div>
+  </section>
+
+  <section id="kontak" class="section kontak">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="kontak-buttons">
+        <a href="https://www.instagram.com/ferryardnsyhh_" target="_blank" class="btn-kontak ig">📸 Instagram</a>
+        <a href="mailto:ferrykocak21@gmail.com" class="btn-kontak email">📧 Email</a>
+        <a href="https://maps.google.com/?q=Jl. Kopi No. 1, Pekanbaru" target="_blank" class="btn-kontak lokasi">📍 Alamat</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="keranjang" class="keranjang">
+  <h3>Keranjang Belanja</h3>
+  <ul id="daftarKeranjang"></ul>
+  <p id="totalHarga">Total: Rp 0</p>
+  <button onclick="checkout()" class="btn-checkout">Checkout</button>
+</div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; Saeclum Café 2025 . Semua hak dilindungi.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
